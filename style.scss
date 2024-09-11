@@ -1,6 +1,7 @@
 $purple: #8b37ff;
 h1,h2,h3{
     margin: 0;
+    text-align: center;
 }
 h3 {
     font-size: 24px;
@@ -38,7 +39,7 @@ header {
         z-index: 0;
     }
     .icon {
-        width: 25px;
+        width: 20px;
     }
     button {
         background-color: $purple;
@@ -52,18 +53,38 @@ header {
         margin-top: 50px;
     }
 }
-.info {
-    max-width: 300px;
-    &:nth-of-type(2) {
-        border-right: 1px solid rgba(255,255,255,0.5);
-        border-left: 1px solid rgba(255,255,255,0.5);
+.perks {
+    row-gap: 35px;
+    .info {
+        max-width: 300px;
+        min-width: 175px;
+        &:nth-of-type(2) {
+            border-right: 1px solid rgba(255,255,255,0.5);
+            border-left: 1px solid rgba(255,255,255,0.5);
+        }
+        div {
+            gap: 10px;
+        }
+        .stat {
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
-    div {
-        gap: 10px;
+}
+.nav {
+    text-align: center;
+    padding: 0px 25px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    margin: 0;
+    gap: 0px 50px;
+    .col {
+        display: inline-block;
+        padding: 20px 0px;
     }
-    .stat {
-        font-size: 22px;
-        font-weight: 700;
+    a {
+        text-decoration: none;
+        color: black;
     }
 }
 .row {
@@ -73,3 +94,19 @@ header {
 .bracket {
     color: $purple;
 }
+@media screen and (max-width: 424px) {
+    h1{
+        font-size: 15vw;
+    }
+    h2 {
+        font-size: 10vw;
+    }
+    h3 {
+        font-size: 7.5vw;
+    }
+    .perks .info {
+        &:nth-of-type(2) {
+            border: none;
+        }
+    }
+  }
